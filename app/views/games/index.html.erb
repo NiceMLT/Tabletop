@@ -12,6 +12,13 @@
   <tbody>
     <% @games.each do |game| %>
       <tr>
+        <td><%= game.name %></td>
+        <td><%= game.gametype %></td>
+        <td><%= game.player_minimum %></td>
+        <td><%= game.player_maximum %></td>
+        <td><%= game.players_best_with %></td>
+        <td><%= game.playtime %></td>
+        <td><%= game.notes %></td>
         <td><%= link_to 'Show', game %></td>
         <td><%= link_to 'Edit', edit_game_path(game) %></td>
         <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>

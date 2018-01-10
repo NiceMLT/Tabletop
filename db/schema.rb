@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180110030411) do
+ActiveRecord::Schema.define(version: 20180110032922) do
 
   create_table "games", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.string   "name"
+    t.integer  "playtime",          default: 0
+    t.string   "gametype"
+    t.integer  "player_minimum",    default: 0
+    t.integer  "player_maximum",    default: 0
+    t.integer  "player_age",        default: 0
+    t.boolean  "expansion",         default: false
+    t.integer  "players_best_with", default: 0
+    t.text     "notes",             default: "f"
   end
 
   create_table "users", force: :cascade do |t|
